@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Number Generator</title>
+
+    <style>
+        .headTitle{
+            font-size: 70px;
+            text-align: center;
+            color: black;
+            font-family: Arial, serif;
+        }
+        button{
+            border: hotpink solid 4px;
+            width: 800px;
+            font-size: 35px;
+            padding: 20px;
+            margin: 15px;
+            background-color: white;
+            cursor: pointer;
+            font-family: "Comic Sans MS", serif;
+        }
+        body{
+            background-color: dodgerblue;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="headTitle">NUMBER GENERATOR</p>
+
+        <button onclick="alert(generateNumber(10))">Generate a number between 1 and 10</button>
+
+        <button onclick="alert(generateNumber(100))">Generate a number between 1 and 100</button>
+
+        <button onclick="alert(generateNumber(1000))">Generate a number between 1 and 1000</button>
+
+        <!--<button onclick="">Generate a number between X and Y </button> --> <!--Will be in the updated Version-->
+
+
+    <script>
+
+        function generateNumber (Max){
+            return Math.round(Max*Math.random());
+
+    }
+
+    </script>
+
+</body>
+</html>
