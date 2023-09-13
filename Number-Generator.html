@@ -2,50 +2,36 @@
 <html lang="en">
 <head>
     <title>Number Generator</title>
-
-    <style>
-        .headTitle{
-            font-size: 70px;
-            text-align: center;
-            color: black;
-            font-family: Arial, serif;
-        }
-        button{
-            border: hotpink solid 4px;
-            width: 800px;
-            font-size: 35px;
-            padding: 20px;
-            margin: 15px;
-            background-color: white;
-            cursor: pointer;
-            font-family: "Comic Sans MS", serif;
-        }
-        body{
-            background-color: dodgerblue;
-        }
-
-    </style>
+    <link rel="stylesheet" href="Number-Generator.css">
+    <script src="Number-Generator.js"></script>
 </head>
 <body>
-    <p class="headTitle">NUMBER GENERATOR</p>
-
-        <button onclick="alert(generateNumber(10))">Generate a number between 1 and 10</button>
-
-        <button onclick="alert(generateNumber(100))">Generate a number between 1 and 100</button>
-
-        <button onclick="alert(generateNumber(1000))">Generate a number between 1 and 1000</button>
-
-        <!--<button onclick="">Generate a number between X and Y </button> --> <!--Will be in the updated Version-->
-
-
-    <script>
-
-        function generateNumber (Max){
-            return Math.round(Max*Math.random());
-
-    }
-
-    </script>
-
+    <div class="screen">
+        <div>
+            <h1>
+                Number Generator
+            </h1>
+        </div>
+        <div>
+            <p id="result" class="generatedNumber">
+                Your Number
+            </p>
+        </div>
+        <div class="input">
+            <p>
+                Min:
+                <input id="min" type="number"  placeholder="0">
+            </p>
+            <p>
+                Max:
+                <input id="max" type="number" placeholder="&infin;">
+            </p>
+        </div>
+        <div>
+            <button onclick="generateNumber();" class="generateButton">
+                Generate
+            </button>
+        </div>
+    </div>
 </body>
 </html>
